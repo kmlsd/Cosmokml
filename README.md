@@ -1,2 +1,3 @@
 # Cosmokml
-app for cosmo staff
+ this app dev for cosmo staff of moplaco trading plc
+ 
