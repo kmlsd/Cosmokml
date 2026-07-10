@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Show Box Example</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			function ShowBox() {
+				  $("#divTestArea1").fadeIn("slow");
+				  $("#divTestArea21").fadeIn("fast");
+				  $("#divTestArea22").fadeIn("fast");
+				  $("#divTestArea23").fadeIn(2000);
+				  $("#divTestBox1").animate(
+					  		{
+											"lift" : "1000px"
+										},   
+					            
+					                 function()
+					  		{
+											$(this).animate(
+																{ "left" : "20px" },
+																
+																function()
+																{
+																						$(this).animate({ "left" : "50px" }, 500);
+																					}
+															)
+										}
+					  	);
+			};
+			$(function()
+				{
+						$("#divText").text("A dynamically set text");
+						$("#divHtml").html("<b><i>A dynamically set HTML string</i></b>");
+						$("#txtTest").val("kamal name");
+					        $("#aGoogle3").attr(
+								{ 
+											"href" : "http://www.google.co.uk", 
+											"title" : "Google.co.uk"
+										});
+					        $("a.google").attr("href", function(index, oldValue)
+								{
+											return oldValue + "imghp?tab=wi";
+										});
+				});
+		</script>
+	</head>
+	<body>
+		<a href="http://www.google.com" id="aGoogle3">Google Link</a><br />
+		<a href="http://www.google.com/" class="google">Google.com</a><br />
+		<a href="http://www.google.co.uk/" class="google">Google UK</a><br />
+		<a href="http://www.google.de/" class="google">Google DE</a><br />
+
+		<div id="divTestBox1" style="height: 50px; background-color: #9966FF;">
+			        <b>Hello, kamal seid!</b>
+					<div id="divTestBox1" style="height: 20px; width: 50px; background-color: #89BC38; position: absolute;"></div>
+		</div>
+		<div id="divTestArea21" style="width: 50px; height: 50px; display: none; background-color: #89BC38;"></div>
+		<div id="divTestArea22" style="width: 50px; height: 50px; display: none; background-color: #C3D1DF;"></div>
+		<div id="divTestArea23" style="padding: 50px; display: none; background-color: #9966FF;"></div>
+		<div id="divTestArea1" style="padding: 50px; background-color: #89BC30; text-align: center; display: none;">
+			  <b>Hello, kamal seid!</b>
+		</div>
+		<a href="javascript:void(0);" onclick="ShowBox();">kaml box</a>
+		<a href="javascript:void(0);" onclick="$('#divTestArea3').slideDown(5000).slideUp(5000);">Show box</a>  
+		<a href="javascript:void(0);" onclick="$('#divTestArea3').stop(true);">Stop</a>
+		<a href="javascript:void(0);" onclick="$('#divTestArea3').stop(true, true);">Stop but finish</a>   
+		<a href="javascript:void(0);" onclick="$('#divTestArea3').clearQueue().hide();">Reset</a>
+		<a href="javascript:void(0);" onclick="$.fx.off = true;">allreset</a>
+		<div id="divTestArea3" style="padding: 100px; background-color: #89BC38; text-align: center; display: none;">
+			        <b>Hello, world!</b>
+		</div> 
+		<div id="divText"></div>
+		<div id="divHtml"></div>
+		<input type="text" id="txtTest" name="txtTest" value="Input field" />
+		<div class="searchBar">
+			  <div class="container">
+				      <form action="/search" method="POST" class="search__form" role="search">
+					            <input 
+												        type="search"
+													        aria-label="Seach"
+														        id="searchInput"
+															        name="searchTerm"
+																        placeholder="Seach the site..."
+																	      >
+																	          </form>
+						        <div id="searchClose">Close</div>
+							  </div>
+		</div>
+		</div>
+		 <div className="auth-container">
+			             <h2>Login</h2>
+				                 {error && <div className="error-message">{error}</div>}
+						             <form onSubmit={handleSubmit}>
+								                     <div className="form-group">
+											                         <label>Username or Email</label>
+														                     <input
+																		                             type="text"
+																					                             name="username"
+																								                             value={formData.username}
+																								                             onChange={handleChange}
+																								                             required
+																								                             placeholder="Enter username or email"
+																											                         />
+																                     </div>
+																		                     <div className="form-group">
+																					                         <label>Password</label>
+																								                     <input
+																												                             type="password"
+																															                             name="password"
+																																		                             value={formData.password}
+																																		                             onChange={handleChange}
+																																		                             required
+																																		                             placeholder="Enter password"
+																																					                         />
+																										                     </div>
+																												                     <button type="submit" disabled={loading}>
+																															                         {loading ? 'Logging in...' : 'Login'}
+																																		                 </button>
+																																				             </form>
+																																					                 <div className="auth-link">
+																																								                 Don't have an account? <Link to="/register">Register</Link>
+																																										             </div>
+																																											             </div> 
+	</body>
+</html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Show Box Example</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			function ShowBox() {
+				  $("#divTestArea1").fadeIn("slow");
+				  $("#divTestArea21").fadeIn("fast");
+				  $("#divTestArea22").fadeIn("fast");
+				  $("#divTestArea23").fadeIn(2000);
+				  $("#divTestBox1").animate(
+					  		{
+											"lift" : "1000px"
+										},   
+					            
+					                 function()
+					  		{
+											$(this).animate(
+																{ "left" : "20px" },
+																
+																function()
+																{
+																						$(this).animate({ "left" : "50px" }, 500);
+																					}
+															)
+										}
+					  	);
+			};
+			$(function()
+				{
+						$("#divText").text("A dynamically set text");
+						$("#divHtml").html("<b><i>A dynamically set HTML string</i></b>");
+						$("#txtTest").val("kamal name");
+					        $("#aGoogle3").attr(
+								{ 
+											"href" : "http://www.google.co.uk", 
+											"title" : "Google.co.uk"
+										});
+					        $("a.google").attr("href", function(index, oldValue)
+								{
+											return oldValue + "imghp?tab=wi";
+										});
+				});
+		</script>
+	</head>
+	<body>
+		<a href="http://www.google.com" id="aGoogle3">Google Link</a><br />
+		<a href="http://www.google.com/" class="google">Google.com</a><br />
+		<a href="http://www.google.co.uk/" class="google">Google UK</a><br />
+		<a href="http://www.google.de/" class="google">Google DE</a><br />
+
+		<div id="divTestBox1" style="height: 50px; background-color: #9966FF;">
+			        <b>Hello, kamal seid!</b>
+					<div id="divTestBox1" style="height: 20px; width: 50px; background-color: #89BC38; position: absolute;"></div>
+		</div>
+		<div id="divTestArea21" style="width: 50px; height: 50px; display: none; background-color: #89BC38;"></div>
+		<div id="divTestArea22" style="width: 50px; height: 50px; display: none; background-color: #C3D1DF;"></div>
+		<div id="divTestArea23" style="padding: 50px; display: none; background-color: #9966FF;"></div>
+		<div id="divTestArea1" style="padding: 50px; background-color: #89BC30; text-align: center; display: none;">
+			  <b>Hello, kamal seid!</b>
+		</div>
+		<a href="javascript:void(0);" onclick="ShowBox();">kaml box</a>
+		<a href="javascript:void(0);" onclick="$('#divTestArea3').slideDown(5000).slideUp(5000);">Show box</a>  
+		<a href="javascript:void(0);" onclick="$('#divTestArea3').stop(true);">Stop</a>
+		<a href="javascript:void(0);" onclick="$('#divTestArea3').stop(true, true);">Stop but finish</a>   
+		<a href="javascript:void(0);" onclick="$('#divTestArea3').clearQueue().hide();">Reset</a>
+		<a href="javascript:void(0);" onclick="$.fx.off = true;">allreset</a>
+		<div id="divTestArea3" style="padding: 100px; background-color: #89BC38; text-align: center; display: none;">
+			        <b>Hello, world!</b>
+		</div> 
+		<div id="divText"></div>
+		<div id="divHtml"></div>
+		<input type="text" id="txtTest" name="txtTest" value="Input field" />
+		<div class="searchBar">
+			  <div class="container">
+				      <form action="/search" method="POST" class="search__form" role="search">
+					            <input 
+												        type="search"
+													        aria-label="Seach"
+														        id="searchInput"
+															        name="searchTerm"
+																        placeholder="Seach the site..."
+																	      >
+																	          </form>
+						        <div id="searchClose">Close</div>
+							  </div>
+		</div>
+		</div>
+		 <div className="auth-container">
+			             <h2>Login</h2>
+				                 {error && <div className="error-message">{error}</div>}
+						             <form onSubmit={handleSubmit}>
+								                     <div className="form-group">
+											                         <label>Username or Email</label>
+														                     <input
+																		                             type="text"
+																					                             name="username"
+																								                             value={formData.username}
+																								                             onChange={handleChange}
+																								                             required
+																								                             placeholder="Enter username or email"
+																											     iv>
+																                     <div className="form-group">
+																			                   ord"
+																					                           name="password"
+																								                     <!DOCTYPE html>
+																										     <html>
+																											     <head>
+																												     <title>Show Box Example</title>
+																												     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+																												     <script>
+																													     function ShowBox() {
+																														       $("#divTestArea1").fadeIn("slow");
+																														       $("#divTestArea21").fadeIn("fast");
+																														       $("#divTestArea22").fadeIn("fast");
+																														       $("#divTestArea23").fadeIn(2000);
+																														       $("#divTestBox1").animate(
+																															       		{
+																																					"lift" : "1000px"
+																																				},   
+																															                 
+																															                      function()
+																															       		{
+																																					$(thi, 
+																																								"title" : "Google.co.uk"
+																																							});
+																																		        $("a.google").attr("nd-color: #9966FF;">
+																																				        <b>Hello, kamal seid!</b>
+																																					<div idm action="/search" method="POST" class="search__form" role="sea  </div>
+																																				                <button type="submit" disabled={loadinik
